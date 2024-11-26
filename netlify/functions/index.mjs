@@ -7,6 +7,7 @@ import serverless from "serverless-http";
 configDotenv();
 const app = express();
 const router = Router();
+const PORT = process.env.PORT || 3000
 
 app.use(cors());
 
@@ -86,5 +87,9 @@ router.get("/:matchId/head2head", async (req, res) => {
 });
 
 app.use("/api/", router)
+
+// app.listen(PORT, () => {
+//   console.log("App is running on http://localhost:3000")
+// })
 
 export const handler = serverless(app);
