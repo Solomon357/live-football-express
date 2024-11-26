@@ -9,7 +9,7 @@ const app = express();
 const router = Router();
 // const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({ credentials: true, origin: true}));
 
 const accessParams = {
   headers: {
