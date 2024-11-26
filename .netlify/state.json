@@ -1,3 +1,21 @@
 {
-	"siteId": "a6a8084a-349c-46be-ac8f-aaadd4f52e87"
+	"siteId": "a6a8084a-349c-46be-ac8f-aaadd4f52e87",
+	"geolocation": {
+		"data": {
+			"city": "Peterborough",
+			"country": {
+				"code": "GB",
+				"name": "United Kingdom"
+			},
+			"subdivision": {
+				"code": "ENG",
+				"name": "England"
+			},
+			"timezone": "Europe/London",
+			"latitude": 52.5679,
+			"longitude": -0.2836,
+			"postalCode": "PE3"
+		},
+		"timestamp": 1732635819366
+	}
 }

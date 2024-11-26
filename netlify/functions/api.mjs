@@ -7,7 +7,7 @@ import serverless from "serverless-http";
 configDotenv();
 const app = express();
 const router = Router();
-const PORT = process.env.PORT || 3000
+// const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 router.get("/:leagueCode/matches", async (req, res) => {
   const { query: { dateFrom, dateTo } } = req;
   const { params: { leagueCode } } = req; 
-
+  
   try {
     const response = await axios.get(`https://api.football-data.org/v4/competitions/${leagueCode}/matches?dateFrom=${dateFrom}&dateTo=${dateTo}`, accessParams);
     res.json(response.data);  // Send the data from the external API to the frontend
@@ -93,3 +93,4 @@ app.use("/api/", router)
 // })
 
 export const handler = serverless(app);
+
